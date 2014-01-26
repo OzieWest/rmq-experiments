@@ -1,0 +1,4 @@
+RMQtests
+========
+
+Тестирую RabbitMQ Server
