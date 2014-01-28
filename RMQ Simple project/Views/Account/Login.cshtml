@@ -1,0 +1,20 @@
+﻿@model RMQ_Simple_project.Models.LoginModel
+
+@{
+	ViewBag.Title = "Вход";
+}
+
+<div style="margin-top: 20px;" class="pagination-centered">
+	<div style="width: 500px; margin: auto;" class="well well-smal">
+		<div style="background: rgb(233, 233, 233);" class="well well-smal">
+			<img src="~/Content/sync_oauth.png" />
+		</div>
+		<div>
+			@Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+		</div>
+	</div>
+</div>
+
+@section Scripts {
+	@Scripts.Render("~/bundles/jqueryval")
+}

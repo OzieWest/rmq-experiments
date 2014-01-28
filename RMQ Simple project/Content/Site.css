@@ -1,0 +1,11 @@
+﻿html {
+	background-image: url(_backgrounds/starring.png);
+}
+
+body {
+	background: none;
+}
+
+.username {
+	color: white;
+}

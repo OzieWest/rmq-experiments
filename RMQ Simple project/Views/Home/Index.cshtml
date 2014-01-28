@@ -1,0 +1,29 @@
+﻿@{
+	ViewBag.Title = "Главная";
+}
+
+@section featured {
+
+}
+
+<div class="row-fluid" ng-app="mqApp" ng-controller="mqController">
+	<div class="well well-small">
+		
+		{{ 2 + 2 }}
+
+	</div>
+</div>
+
+@section scripts {
+	<script type="text/javascript">
+		(function () {
+
+			var app = angular.module('mqApp', ['ngSanitize']);
+			app.value('show', toastr);
+			app.controller('mqController', function($scope, show) {
+				
+			});
+
+		})();
+	</script>
+}

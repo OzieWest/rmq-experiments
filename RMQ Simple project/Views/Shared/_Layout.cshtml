@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>@ViewBag.Title - RabbitMQ tester</title>
+	<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<meta name="viewport" content="width=device-width" />
+
+	<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+	<link href="~/Content/bootstrap-responsive.min.css" rel="stylesheet" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.min.css" rel="stylesheet" />
+	<link href="~/Content/Site.css" rel="stylesheet" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+	<script src="http://code.angularjs.org/1.2.10/angular-sanitize.min.js"></script>
+</head>
+<body>
+	<div class="container">
+
+		<div id="header" class="row-fluid">
+			@Html.Partial("_LoginPartial")
+		</div>
+
+		<div id="main" class="row-fluid">
+			@RenderSection("featured", required: false)
+			@RenderBody()
+		</div>
+
+		<div id="footer" class="row-fluid">
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.min.js"></script>
+	@RenderSection("scripts", required: false)
+</body>
+</html>
