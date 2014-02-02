@@ -55,6 +55,7 @@
 
             if (string.IsNullOrEmpty(VirtualHost) == false)
                 _connectionFactory.VirtualHost = VirtualHost;
+
             if (Port > 0)
                 _connectionFactory.Port = Port;
 
@@ -87,8 +88,7 @@
             while (DateTime.Now <= timeoutAt)
             {
                 var deliveryArgs = (BasicDeliverEventArgs)_consumer.Queue.Dequeue();
-                if (deliveryArgs.BasicProperties != null
-                    && deliveryArgs.BasicProperties.CorrelationId == correlationToken)
+                if (deliveryArgs.BasicProperties != null && deliveryArgs.BasicProperties.CorrelationId == correlationToken)
                 {
                     var response = Encoding.Default.GetString(deliveryArgs.Body);
                     return response;
